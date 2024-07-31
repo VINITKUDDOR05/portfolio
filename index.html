@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vinit Kuddor Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vinit Kuddor</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>poems & Stories</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="https://www.pocketnovel.com/novel/53ea6820869810765a1864dd6c1d5cf5e3814414" class="nav-link"><span>Books</span></a></li>
+			  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/profile-pic.png); background-position: ;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Vinit Kuddor </span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Director  ',
+						'Writer ',
+						'Poet   ',
+						'Web Developer ',
+					
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Writer & Director</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.youtube.com/channel/UCeCtZCbB6D_ZjG92wSa-S7w" class="btn btn-primary py-3 px-4">YouTube</a> 
+							<a href="#resume-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/profile-pic (1).png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Vinit Kuddor </span></p>
+										<p><span class="title-s">Job Role: </span> <span>Writer & Director</span></p>
+										<p><span class="title-s">Experience: </span> <span>1 Years 8 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Mumbai, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skill's Chat </p>
+									<span>Story Development</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Visual Storytelling</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Actor Direction,</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Film Production</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Project Management & Leadership</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a multifaceted creative professional with 1 year and 8 months of experience in writing and directing. My passion for storytelling extends beyond the screen, as I am also an accomplished poet and content creator on YouTube. My podcast, which explores diverse themes, is accessible on Amazon Music and various other platforms.
+
+									Over the years, I have written an array of poems and stories, capturing the essence of human experiences. My latest project, a novel titled "The Family War," is now available in both Hindi and English on Pocket Novel.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Writer & Director</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Film Making </span></li>
+									<li class="d-flex"><span>Education:</span> <span> Bsc-IT </span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi , Marathi , Kannada </span></li>
+									<li class="d-flex"><span> Tools:</span> <span>Celtx, Storyboarder &amp; Adobe Premiere Pro</span></li>
+									<li class="d-flex"><span> Skills:</span> <span>Story Development:, Visual Storytelling, Actor Direction, Film Production, Innovation,Project Management &amp; Leadership</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Guitar, Panting , Reading</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/vinit-kuddor-866473247/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Poems & Stories </h1>
+            <h2 class="mb-4">Poems & Stories</h2>
+            <p>I am a passionate poet and storyteller known for my evocative poetry and stories that delves deep into human emotions and relationships. My poems often explore themes of love, loss, resilience, and the complexities of human nature. Some of my notable works include:-</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">English Poems</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">April-2024 </span>
+						<h2>Painting and 9 emotions.....</h2>
+						<span class="position">- Vinit Kuddor</span>
+						<p class="mt-4">Colors on canvas, emotions so strong,<br>
+							A painting that tells a story, all in one song.<br>
+							Joy and laughter, like sunshine so bright,<br>
+							Sadness and tears, like a cloudy night. <br>
+							
+							Anger's fire burning, fierce and bold, <br>
+							Love's warm embrace, a feeling to hold. <br>
+							Fear's whispers, shadows creeping near, <br>
+							Hope's shining light, banishing all fear. <br>
+							
+							Surprise's gasp, eyes open wide, <br>
+							Peace and calmness, like a gentle tide. <br>
+							Nine emotions painted, a masterpiece to see, <br>
+							Expressed on canvas, for all hearts to be free. <br>
+							
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May-2024 </span>
+						<h2>Self Happiness...</h2>
+						<span class="position">Vinit Kuddor</span>
+						<p class="mt-4">
+							In the depths of my heart, a light does shine, <br>
+							A joy that's pure, a happiness divine. <br>
+							Embracing who I am, flaws and all, <br>
+							Finding peace within, standing tall. <br>
+							<br>
+							Through laughter and tears, I find my way, <br>
+							Chasing dreams, living each moment, day by day. <br>
+							Self love and acceptance, my guiding star, <br>
+							For in my own happiness, I truly are... <br> <br> <br>
+							
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Hindi Poems</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Oct-2022 </span>
+    					<h2>दर्द- दे -दास्तान </h2>
+    					<span class="position">Vinit Kuddor</span>
+    					<p class="mt-4">अपना दु:ख दूसरों को बता कर उने न दु:खी करना चाहू <br>
+							अपना दु:ख को अपने में ही छुपना चाहू <br>
+							मैं दु:ख छुपाये दिखाता हसी अपना <br>
+							लोग समझे सोभागी , की ये खुश कितना <br>
+							उने क्या पता की दर्द कितना , छुपाये हम अपना <br>
+							सपना भी रुठा है कितना , दर्द भी सच्चा उतना <br>
+							दर्द को हसी मे छुपाये , मैं रोता भी कितना <br>
+							और ऊपर से ठहरे लड़के हम , दर्द होता भी कितना <br>
+							दर्द छुपाये छुपता नहीं , अब दर्द बता ही देता हूँ अपना <br>
+							पर दर्द बताने के लिए कोई पास नहीं अपना <br>
+							किसे सुनाऊ ये दर्द दे दास्तान अपना..... <br>
+							.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Feb-2024 </span>
+    					<h2>मानों  तो मैं बलशाली </h2>
+    					<span class="position">Vinit Kuddor</span>
+    					<p class="mt-4">
+							मानों  तो मैं बलशाली <br>
+							न मानों तो मैं किलकारी <br>
+							हस्त हस्त तुम रह जाना ,जब तक न आए तुम्हारी बारी <br>
+							 जानो तो मैं ज्ञान दीप का पुजारी <br>
+							न जानो तो मैं अज्ञानों का संहारी <br>
+							जनत जनत रह जाओगे ,जब तक आ जाए तुम्हारी बारी <br>
+							मानों तो मैं जीता हुआ बाज़ी <br>
+							न मानों तो हारा हुआ काजी  <br>
+							काजी काजी करत रहे जाओगे ,जब तक न आए तुम्हारी बारी <br> <br><br><br>
+							</p>
+    				</div>
+					
+				</div>
+    		</div>
+			<div class="row">
+				<h1 class="big-4">Stories</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">May-2024 </span>
+    					<h2>Street artists </h2>
+    					<span class="position">Vinit Kuddor</span>
+    					<p class="mt-4">Street artists - yes, I'm talking about those individuals who showcase their art on the road. For them, the road or path is a stage, and the travelers passing by are their audience. If someone offers them a small compliment or a token of appreciation for their work, they're overjoyed and offer their blessings. In the past, street artists weren't accorded much respect, but today they're considered no less than movie stars. What sets them apart is their unique talent, which makes them special.
+
+							If you live in big cities like Mumbai or Delhi, you'll likely find a street artist in every lane. Today's story is about these artists, so let's dive in.
+							
+							On May 31, 2024, around 8 pm, I visited Bandstand Seaface in Bandra with my friends. This spot is one of the most popular places in Mumbai, and if you're from the city, you'll know what I mean. It's a hub for Bollywood stars, and Mumbaikars often catch glimpses of them. We arrived there in about 30 minutes, and what caught my eye was a street artist performing acrobatics. Street artists often showcase a range of talents, including dance, singing, playing instruments, yoga, and more.
+							
+							I was particularly impressed by a performer who was doing backflips and handstands. I assumed he was a dancer, but I didn't know his name. I wanted to talk to him, but as an introvert, I hesitated. I wish I had mustered the courage to approach him and learn more about his craft. Perhaps next time I'll try again.
+							
+							As a writer, the more I travel, the more I get to know people closely. However, being an extrovert certainly helps in these situations. There's more to share, like the competition of throwing fists going on nearby, but I'll save that for the next story. Until then, I'll see you in the next installment.
+							.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Feb-2024 </span>
+    					<h2>मैं शाम हूँ </h2>
+    					<span class="position">Vinit Kuddor</span>
+    					<p class="mt-4">
+							मैं शाम हूँ, मैं लोगों को पूरे दिन में हुए बुरे चीजों को भुलाने का मौका देता हूँ। कुछ लोगों में बड़ा बहता हूँ, मेरा उगना हो या मेरा ढलना  सब को इंतजार होता है, और हाँ मैं जब उगता हूँ तो मुझे सुबह  के नाम से संबोधित करते हैं लोग और ढल जाऊं तो शाम के नाम से। हर भाषा में मेरे अनेक नाम हैं, पर काम एक है लोगों को नया मौका देना और बुरे दिन को भुल जाना।
+
+							और हाँ मैं बहुत दूर से यहाँ आता हूँ, तुम्हारी जिंदगी को मैं बनाता हूँ, बिगाड़ता हूँ, फिर सवरता हूँ, ये आपका सोचना है क्योंकि मैं सिर्फ मौका देता हूँ उस दिन को बिगाड़ना और सवरना आपके हाथ में है। तो फिर आप मुझे क्यों कोसते  हैं कि आज का दिन मेरा बुरा था? चलो मैं कभी इन बातों का बुरा नहीं मानता, और मैं अपना काम नहीं छोड़ता, हाँ पर आप खुद की गलतियों को दूसरों पर डालना छोड़ो और मेरे द्वारा दिए अवसर का लाभ उठाओ क्योंकि मैं किसी के लिए नहीं रुकता और आप कैसे भूल सकते हैं कि मुझे समय भी कहा जाता है।
+							
+							और यार आप लोग सप्ताह के ६ दिन तो बड़ी खुशी से इंतजार करते हो, पर जब बात इतवार की आए तो क्यों हो जाते हो आप लोग मायूस? क्योंकि मैंने आपका छुट्टी भरा इतवार को बर्बाद कर दिया, मेरी नियति शाम पर  ढलना, और उगना नहीं होती तो मैं आपके हिसाब से चलती। पर ऐसा हो नहीं सकता, ये अफसोस की बात है।
+							
+							आपको अन्न (भोजन) देने का कारण भी मैं, आपको रहने लायक जगह देने का कारण भी मैं और मैं ही हूँ सूर्यदेव का अंश भी... मुझे भगवान समझ पूजा भी करते आप लोग, और अगन रूप को गाली भी देते आप लोग। पर मैं ना मानता बुरा आपका, नादान बालक समझ माफ कर देता हूँ आपको।
+							
+							पर आपने कभी सोचा है मैं इतना गरम क्यों हो रहा हूँ? नहीं ना, ये भी आप लोगों के कारण... आपने पेड़ों को काटा, घर अपना बना लिया, समुद्र को गंदा किया, अपने साथ दूसरों को भी परेशान किया। देखा जाए तो मैं हमेशा से इतना गरम ही था, आप लोगों के कारण ओजोन की परत हटती जा रही है और मैं पृथ्वी को रोशनी के साथ हानिकारक किरणें भी दे रहा हूँ।
+							
+							जाते हुए मैं एक और चीज कहना चाहूंगा कि समझ जाओ अब तो तुम्हारा हाल, बचा लो अपने आप को यार। लगाओ पेड़-पौधे हजार, वरना मैं दिखूंगा। अंतिम बार...
+							<br><br><br><br><br><br><br>
+							</p>
+    				</div>
+					
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://www.writco.in/VINITKUDDOR05" class="btn btn-primary py-4 px-5">Read More....</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the projects as a Assistant Director.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://youtu.be/AcFWdtuMdBQ?feature=shared" class="block-20 zoom-effect" style="background-image: url('images/p1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://youtu.be/AcFWdtuMdBQ?feature=shared">Krushna To Saavla</a></h3>
+                <p>As a Assistant Director.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://youtube.com/shorts/Jd6USn_hLxk?feature=shared" class="block-20 zoom-effect" style="background-image: url('images/p2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://youtube.com/shorts/Jd6USn_hLxk?feature=shared">Rolex Entry Recreation</a></h3>
+                <p>As a Director</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://youtu.be/6u_7tdoCmFM?feature=shared" class="block-20 zoom-effect" style="background-image: url('images/p3.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://youtu.be/6u_7tdoCmFM?feature=shared">Gift Wali Gf..</a></h3>
+                <p>As a Assistant Director and Small camo Act</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://youtu.be/Pa9oqcPgbS4?feature=shared" class="block-20 zoom-effect" style="background-image: url('images/p4.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://youtu.be/Pa9oqcPgbS4?feature=shared">Sidu Moosewala Short Film </a></h3>
+				  <p>As a Assistant Director </p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/p5.JPG');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">Neta ji Chale Interview dene </a></h3>
+				  <p>As a Assistant Director $ Script Writer</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="4">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="100%">0</strong>
+                <span>Accurancy Rate </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> YouTube  </span> </h2>
+						<div class="heading"> <h4> I love to make films  &amp; uncover hidden stories </h4>
+						<br>
+						<p><a href="https://www.youtube.com/channel/UCeCtZCbB6D_ZjG92wSa-S7w" class="btn btn-primary py-3 px-5">YouTube</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Mumbai, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+ 91 93264*****</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">vinitkuddor999@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="#" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/channel/UCeCtZCbB6D_ZjG92wSa-S7w"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/vinit-kuddor-866473247/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.threads.net/@vinitkuddor05"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/vinit.kuddor.79?mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/vinitkuddor05?igsh=MWlucWR4OHRoMndoMA=="><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made by   <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="" target="_blank">Vinit Kuddor</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
